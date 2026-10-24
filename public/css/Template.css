@@ -1,0 +1,148 @@
+body {
+    background-color: antiquewhite;
+    margin: 0px;
+    overflow-x: hidden;
+}
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+#IsiNavbar {
+    background-color: #ffffff;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 320px;
+    border-radius: 1rem;
+}
+
+#KelompokMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+}
+
+.LinkMenu {
+    text-decoration: none;
+    font-family: "Anton", sans-serif;
+    border: solid 3px #ff4f00;
+    gap: 20px;
+    border-radius: 3rem;
+    width: 140px;
+    text-align: center;
+    padding: 4px;
+    color: #ff4f00;
+}
+
+.LinkMenu:hover {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    border: solid 3px rgba(0, 0, 0, 0);
+}
+
+#Logo {
+    font-family: "Anton", sans-serif;
+    color: #ff4f00;
+}
+
+#KelompokLoginDaftar {
+    margin-top: 17px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 10px;
+
+}
+
+.btnLoginDaftar {
+    background-color: #ff4f00;
+    color: #ffffff;
+    font-family: "Anton", sans-serif;
+    border: none;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border-radius: 7px;
+    gap: 20px;
+}
+
+
+#Footer {
+    background-color: #1c1c1c;
+    width: 100%;
+    height: 450px;
+    position: static;
+}
+
+#IsiFooter1 {
+
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+
+}
+
+#JudulFooter {
+    color: #ffffff;
+    font-family: "Anton", sans-serif;
+
+
+}
+
+.FooterSubJudul {
+    color: #ffffff;
+    font-family: "Smooch sans", sans-serif;
+    font-size: large;
+}
+
+.TautanFooter {
+    color: #ffffff;
+    font-family: "Smooch sans", sans-serif;
+    text-decoration: none;
+}
+
+.TautanFooter:hover {
+    color: #ff4f00;
+}
+
+.TautanFooterLink{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.IsiFooter {
+    color: #ffffff;
+    font-family: "Smooch sans", sans-serif;
+}
+
+#FooterBawah {
+    display: flex;
+    justify-content: center;
+    gap: 700px;
+
+}
+
+.TextBawahFooter {
+    color: #ffffff;
+    font-family: arial;
+    font-size: small;
+}
+
+hr {
+    width: 90%;
+}
+
+main {
+    height: 2000px;
+}
+#IsihalamanLS{
+    margin-top: 0;
+}

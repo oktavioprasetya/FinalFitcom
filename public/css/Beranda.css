@@ -1,0 +1,304 @@
+body {
+    background-color: antiquewhite;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+#IsiNavbar {
+    background-color: #ffffff;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 320px;
+    border-radius: 1rem;
+}
+
+#KelompokMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+}
+
+.LinkMenu {
+    text-decoration: none;
+    font-family: "Anton", sans-serif;
+    border: solid 3px #ff4f00;
+    gap: 20px;
+    border-radius: 3rem;
+    width: 140px;
+    text-align: center;
+    padding: 4px;
+    color: #ff4f00;
+}
+
+.LinkMenu:hover {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    border: solid 3px rgba(0, 0, 0, 0);
+}
+
+#Logo {
+    font-family: "Anton", sans-serif;
+    color: #ff4f00;
+}
+
+#KelompokLoginDaftar {
+    margin-top: 17px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 10px;
+
+}
+
+.btnLoginDaftar {
+    background-color: #ff4f00;
+    color: #ffffff;
+    font-family: "Anton", sans-serif;
+    border: none;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border-radius: 7px;
+    gap: 20px;
+}
+
+
+#Footer {
+    background-color: #1c1c1c;
+    width: 100%;
+    height: 450px;
+    position: static;
+}
+
+#IsiFooter1 {
+
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+
+}
+
+#JudulFooter {
+    color: #ffffff;
+    font-family: "Anton", sans-serif;
+
+
+}
+
+.FooterSubJudul {
+    color: #ffffff;
+    font-family: "Smooch sans", sans-serif;
+    font-size: large;
+}
+
+.TautanFooter {
+    color: #ffffff;
+    font-family: "Smooch sans", sans-serif;
+    text-decoration: none;
+}
+
+.TautanFooter:hover {
+    color: #ff4f00;
+}
+
+.TautanFooterLink{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.IsiFooter {
+    color: #ffffff;
+    font-family: "Smooch sans", sans-serif;
+}
+
+#FooterBawah {
+    display: flex;
+    justify-content: center;
+    gap: 700px;
+
+}
+
+.TextBawahFooter {
+    color: #ffffff;
+    font-family: arial;
+    font-size: small;
+}
+
+hr {
+    width: 90%;
+}
+
+main {
+    height: 2000px;
+}
+
+#Hero {
+    padding-top: 170px;
+    height: 600px;
+    background: linear-gradient(120deg, #ff7a33, #ff4f00, #d93f00);
+    background-size: 300% 300%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+#IsiHero {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+
+}
+
+#HeroBadge {
+    font-family: Tahoma;
+    background-color: rgba(255, 254, 254, 0.379);
+    color: #ffffff;
+    padding: 3px 20px;
+    border-radius: 2rem;
+}
+
+#HeroTitle {
+    font-family: "Anton", sans-serif;
+    color: #ffffffe3;
+    font-size: 42px;
+}
+
+#HeroDesc {
+    font-family: Tahoma;
+    color: #ffffffea;
+    font-style: normal;
+
+}
+
+#btnBuatLaporan {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    font-family: tahoma;
+    padding: 7px 20px;
+    border-radius: 3rem;
+    text-decoration: none;
+}
+
+#HeroActions {
+    display: flex;
+    gap: 20px;
+}
+
+#btnCekStatus {
+    color: #ffffff;
+    font-family: tahoma;
+    padding: 7px 20px;
+    border-radius: 3rem;
+    text-decoration: none;
+    border: solid 2px #ffffff;
+}
+
+#IsiHeroKiri {
+    background-color: #ffffff;
+    height: 400px;
+    border-radius: 2rem;
+    border: solid 10px #ffffff;
+}
+
+#deskripsiSection {
+    padding-top: 100px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+#JudulDeskripsi {
+    text-align: center;
+    color: #ff4f00;
+    font-family: "Anton", sans-serif;
+
+}
+
+#PDeskripsi {
+    text-align: center;
+    font-family: tahoma;
+    font-size: 35px;
+}
+
+#garisDeskripsi {
+    border: none;
+    border-top: 3px dashed #d93f00;
+    width: 70%;
+    margin-top: 80px;
+}
+
+#Statistik {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#StatistikBeranda {
+    background-color: #ff4f00;
+    width: 85%;
+    height: 140px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 200px auto 0;
+    border-radius: 1rem;
+    padding: 0px 30px;
+}
+
+.Items1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.JumlahS {
+    font-family: "Anton", sans-serif;
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.JenisS {
+    font-family: "Anton", sans-serif;
+    font-size: 20px;
+    margin: 2px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#StatistikBeranda hr {
+    width: 1px;
+    height: 100%;
+    border: none;
+    border-left: 2px dashed #ffffff;
+    margin: 0;
+
+}
