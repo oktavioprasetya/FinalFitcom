@@ -1,9 +1,35 @@
-body {
-    background-color: antiquewhite;
-    margin: 0px;
-    overflow-x: hidden;
+
+:root {
+    --oranye: #ff4b00;
+    --oranye-muda: #ff762f;
+    --krem: #f0e9e1;
+    --hitam: #202020;
+    --putih: #ffffff;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    color: var(--hitam);
+    background: var(--krem);
+    font-family: "Smooch Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVBAR */
 #navbar {
     position: fixed;
     top: 0;
@@ -75,230 +101,861 @@ body {
     gap: 20px;
 }
 
-
-#Footer {
-    background-color: #1c1c1c;
-    width: 100%;
-    height: 450px;
-    position: static;
-}
-
-#IsiFooter1 {
-
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-
-}
-
-#JudulFooter {
-    color: #ffffff;
-    font-family: "Anton", sans-serif;
-
-
-}
-
-.FooterSubJudul {
-    color: #ffffff;
-    font-family: "Smooch sans", sans-serif;
-    font-size: large;
-}
-
-.TautanFooter {
-    color: #ffffff;
-    font-family: "Smooch sans", sans-serif;
-    text-decoration: none;
-}
-
-.TautanFooter:hover {
-    color: #ff4f00;
-}
-
-.TautanFooterLink{
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.IsiFooter {
-    color: #ffffff;
-    font-family: "Smooch sans", sans-serif;
-}
-
-#FooterBawah {
-    display: flex;
-    justify-content: center;
-    gap: 700px;
-
-}
-
-.TextBawahFooter {
-    color: #ffffff;
-    font-family: arial;
-    font-size: small;
-}
-
-hr {
-    width: 90%;
-}
-
-main {
-    height: 2000px;
-}
+/* HERO */
 
 #Hero {
-    padding-top: 170px;
-    height: 600px;
-    background: linear-gradient(120deg, #ff7a33, #ff4f00, #d93f00);
-    background-size: 300% 300%;
-    animation: gradient 10s ease infinite;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0%;
-    }
+    width: 100%;
+    color: white;
+    background: linear-gradient(110deg, #ff702f, #ff4b00 65%, #ed3c00);
 }
 
 #IsiHero {
-    display: flex;
-    justify-content: center;
-    gap: 200px;
+    width: min(1200px, 82%);
+    min-height: 445px;
+    margin: auto;
+    padding: 42px 0 46px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
 
+#IsiHeroKanan {
+    max-width: 490px;
 }
 
 #HeroBadge {
-    font-family: Tahoma;
-    background-color: rgba(255, 254, 254, 0.379);
-    color: #ffffff;
-    padding: 3px 20px;
-    border-radius: 2rem;
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 8px 20px;
+    background: rgba(255,255,255,.22);
+    border-radius: 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
 }
 
 #HeroTitle {
+    margin-bottom: 16px;
     font-family: "Anton", sans-serif;
-    color: #ffffffe3;
-    font-size: 42px;
+    font-size: clamp(38px, 3.1vw, 50px);
+    line-height: 1.17;
+    font-weight: 400;
 }
 
 #HeroDesc {
-    font-family: Tahoma;
-    color: #ffffffea;
-    font-style: normal;
-
-}
-
-#btnBuatLaporan {
-    background-color: #1c1c1c;
-    color: #ffffff;
-    font-family: tahoma;
-    padding: 7px 20px;
-    border-radius: 3rem;
-    text-decoration: none;
+    max-width: 475px;
+    font-size: 15px;
+    line-height: 1.55;
 }
 
 #HeroActions {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+#btnBuatLaporan,
+#btnCekStatus {
+    min-width: 180px;
+    padding: 13px 20px;
+    border: 1px solid white;
+    border-radius: 28px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#btnBuatLaporan {
+    color: white;
+    background: #262626;
+    border-color: #262626;
 }
 
 #btnCekStatus {
-    color: #ffffff;
-    font-family: tahoma;
-    padding: 7px 20px;
-    border-radius: 3rem;
-    text-decoration: none;
-    border: solid 2px #ffffff;
+    color: white;
+    background: transparent;
 }
 
-#IsiHeroKiri {
-    background-color: #ffffff;
-    height: 400px;
-    border-radius: 2rem;
-    border: solid 10px #ffffff;
+/* MEMANJANGKAN JARAK ANTAR KOTAK ALUR */
+
+.AlurGrid {
+    min-height: auto !important;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 150px;
+    align-items: start;
 }
+
+/* Kolom kiri: tahap 01 dan 02 */
+.AreaAlurKiri {
+    display: flex;
+    flex-direction: column;
+    gap: 180px !important;
+    padding-top: 0 !important;
+}
+
+/* Kolom kanan: tahap 03 dan 04 */
+.AreaAlurKanan {
+    display: flex;
+    flex-direction: column;
+    gap: 180px !important;
+    padding-top: 260px !important;
+}
+
+/* Kotak dibuat lebih tinggi */
+.ItemAlur {
+    min-height: 170px !important;
+    margin: 0 !important;
+}
+
+.KotakAlur {
+    min-height: 170px !important;
+    height: auto;
+    padding: 35px 40px;
+}
+
+/* Nomor tetap mengikuti posisi kotak */
+.NomorAlur {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Garis mengikuti tinggi seluruh alur */
+.GarisAlurTengah {
+    top: 0;
+    bottom: 0;
+}
+
+/* Tampilan HP */
+@media (max-width: 650px) {
+    .AlurGrid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding-left: 25px;
+    }
+
+    .AreaAlurKiri,
+    .AreaAlurKanan {
+        gap: 35px !important;
+        padding-top: 0 !important;
+    }
+
+    .ItemAlur,
+    .KotakAlur {
+        min-height: 140px !important;
+    }
+
+    .NomorAlur {
+        display: none;
+    }
+}
+/* MERATAKAN JARAK 4 TAHAP ALUR LAPORAN */
+
+.AlurGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 150px;
+    align-items: start;
+    min-height: auto !important;
+}
+
+/* Tahap 01 dan 02 */
+.AreaAlurKiri {
+    display: flex;
+    flex-direction: column;
+    gap: 100px !important;
+    padding-top: 0 !important;
+}
+
+/* Tahap 03 dan 04 */
+.AreaAlurKanan {
+    display: flex;
+    flex-direction: column;
+    gap: 100px !important;
+    padding-top: 100px !important;
+}
+
+/* Semua kotak memiliki tinggi sama */
+.ItemAlur,
+.KotakAlur {
+    min-height: 150px !important;
+    height: 150px;
+}
+
+/* Posisi nomor mengikuti bagian tengah kotak */
+.NomorAlur {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Garis mengikuti tinggi keseluruhan alur */
+.GarisAlurTengah {
+    top: 0;
+    bottom: 0;
+}
+
+/* Tampilan HP */
+@media (max-width: 650px) {
+    .AlurGrid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        min-height: auto !important;
+    }
+
+    .AreaAlurKiri,
+    .AreaAlurKanan {
+        gap: 30px !important;
+        padding-top: 0 !important;
+    }
+
+    .ItemAlur,
+    .KotakAlur {
+        min-height: 140px !important;
+        height: auto;
+    }
+}
+/* DESKRIPSI */
 
 #deskripsiSection {
-    padding-top: 100px;
-    height: 400px;
-    margin-bottom: 20px;
+    width: min(1100px, 82%);
+    margin: auto;
+    padding: 105px 0 0;
+    text-align: center;
 }
 
 #JudulDeskripsi {
-    text-align: center;
-    color: #ff4f00;
+    color: var(--oranye-muda);
     font-family: "Anton", sans-serif;
-
+    font-size: 29px;
+    font-weight: 400;
 }
 
 #PDeskripsi {
-    text-align: center;
-    font-family: tahoma;
-    font-size: 35px;
+    max-width: 760px;
+    margin: 35px auto 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
+    line-height: 1.65;
 }
 
 #garisDeskripsi {
-    border: none;
-    border-top: 3px dashed #d93f00;
-    width: 70%;
-    margin-top: 80px;
+    width: 82%;
+    margin: 80px auto 0;
+    border: 0;
+    border-top: 1px dashed var(--oranye);
 }
 
+/* STATISTIK */
+
 #Statistik {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: min(1100px, 82%);
+    margin: auto;
+    padding-top: 90px;
 }
 
 #StatistikBeranda {
-    background-color: #ff4f00;
-    width: 85%;
-    height: 140px;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    margin: 200px auto 0;
-    border-radius: 1rem;
-    padding: 0px 30px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    overflow: hidden;
+    background: var(--oranye);
+    color: white;
+    border-radius: 20px;
 }
 
-.Items1 {
+.ItemStatistik {
+    min-height: 100px;
+    padding: 18px 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 9px;
+    text-align: center;
+}
+
+.ItemStatistik + .ItemStatistik {
+    border-left: 1px dotted white;
 }
 
 .JumlahS {
     font-family: "Anton", sans-serif;
-    font-size: 40px;
-    margin: 0;
-    text-align: center;
-    color: #ffffff;
+    font-size: 31px;
 }
 
 .JenisS {
     font-family: "Anton", sans-serif;
-    font-size: 20px;
-    margin: 2px;
-    text-align: center;
-    color: #ffffff;
+    font-size: 13px;
+    text-transform: uppercase;
 }
 
-#StatistikBeranda hr {
-    width: 1px;
-    height: 100%;
-    border: none;
-    border-left: 2px dashed #ffffff;
-    margin: 0;
+/* ALUR LAPORAN */
 
+#alur {
+    width: min(1200px, 82%);
+    margin: auto;
+    padding: 145px 0 130px;
+}
+
+#text1 {
+    margin-bottom: 70px;
+}
+
+#JudulAlur {
+    font-family: "Anton", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+#deskripsiAlur {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.AlurGrid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    padding: 0 0;
+}
+
+.GarisAlurTengah {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 1px dashed var(--oranye);
+}
+
+.AreaAlur {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.AreaAlurKanan {
+    padding-top: 105px;
+}
+
+.ItemAlur {
+    position: relative;
+    min-width: 0;
+    min-height: 105px;
+    display: flex;
+    align-items: center;
+}
+
+.KotakAlur {
+    width: 100%;
+    min-height: 105px;
+    padding: 22px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background: var(--oranye);
+    border-radius: 29px;
+    box-shadow: 0 5px 7px rgba(0,0,0,.16);
+}
+
+.ItemAlur2 .KotakAlur,
+.ItemAlur3 .KotakAlur {
+    background: var(--oranye-muda);
+}
+
+.ItemAlur2 .KotakAlur,
+.ItemAlur4 .KotakAlur {
+    text-align: right;
+}
+
+.JudulAlurItem {
+    margin-bottom: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.deskripsiAlurItem {
+    max-width: 390px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.ItemAlur2 .deskripsiAlurItem,
+.ItemAlur4 .deskripsiAlurItem {
+    align-self: flex-end;
+}
+
+.TitikAlur {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    width: 42px;
+    height: 42px;
+    background: #f4f4f4;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 2px 5px rgba(0,0,0,.12);
+}
+
+.AreaAlurKiri .TitikAlur {
+    right: -21px;
+}
+
+.AreaAlurKanan .TitikAlur {
+    left: -21px;
+}
+
+.NomorAlur {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+}
+
+.AreaAlurKiri .NomorAlur {
+    left: calc(100% + 30px);
+    align-items: flex-start;
+}
+
+.AreaAlurKanan .NomorAlur {
+    right: calc(100% + 30px);
+    align-items: flex-end;
+}
+
+.NomorAlur span {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.NomorAlur strong {
+    color: var(--oranye);
+    font-family: "Anton", sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+/* KATEGORI LAPORAN */
+
+#kategori {
+    position: relative;
+    width: 100%;
+    padding: 105px 0 90px;
+    color: white;
+    background: linear-gradient(110deg, #ff4b00, #ff5a0a);
+    border-radius: 0;
+}
+
+#kategori::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 54px;
+    background: var(--krem);
+    border-radius: 0 0 75px 0;
+}
+
+#IsiKategori {
+    width: min(1300px, 86%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 290px 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+#JudulKategori {
+    display: inline-block;
+    margin-bottom: 35px;
+    padding: 24px 32px;
+    color: white;
+    background: var(--oranye);
+    border-radius: 45px;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#DeskripsiKategori p {
+    max-width: 270px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#DaftarKategori {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px 35px;
+}
+
+/* DIV biasa, bukan tombol */
+
+.ItemKategori {
+    min-height: 60px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #171717;
+    border-radius: 15px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* FOOTER */
+
+#Footer {
+    margin-top: 32px;
+    padding: 50px 4% 25px;
+    color: white;
+    background: #202020;
+}
+
+#IsiFooter1 {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr .55fr;
+    gap: 8%;
+    padding: 0 2% 35px;
+}
+
+#JudulFooter,
+.FooterSubJudul {
+    margin-bottom: 17px;
+    font-family: "Anton", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.IsiFooter,
+.TautanFooterLink {
+    color: #e5e5e5;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+#Isi1 .IsiFooter:first-of-type {
+    max-width: 360px;
+}
+
+#Isi1 .FooterSubJudul {
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+
+#Isi3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#Isi3 .FooterSubJudul {
+    margin-bottom: 15px;
+}
+
+.TautanFooterLink {
+    display: block;
+}
+
+.TautanFooterLink:hover,
+.TautanFooterLink.aktif-footer {
+    color: var(--oranye);
+}
+
+#FooterBawah {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 23px 2% 0;
+    border-top: 1px solid #777;
+}
+
+.TextBawahFooter {
+    color: #e5e5e5;
+    font-size: 12px;
+}
+
+/* LAPTOP KECIL DAN TABLET */
+
+@media (max-width: 1050px) {
+    #IsiNavbar {
+        grid-template-columns: 1fr auto;
+    }
+
+    #KelompokMenu {
+        order: 3;
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    #IsiHero {
+        width: 88%;
+        gap: 45px;
+    }
+
+    #IsiKategori {
+        width: 90%;
+        grid-template-columns: 240px 1fr;
+        gap: 30px;
+    }
+
+    #DaftarKategori {
+        gap: 18px;
+    }
+
+    .AlurGrid {
+        column-gap: 65px;
+    }
+
+    .NomorAlur {
+        display: none;
+    }
+}
+
+/* HP */
+
+@media (max-width: 650px) {
+    #IsiNavbar {
+        padding: 15px 5%;
+        gap: 15px;
+    }
+
+    #Logo h2 {
+        font-size: 21px;
+    }
+
+    .LogoIcon {
+        width: 33px;
+        height: 31px;
+    }
+
+    #KelompokLoginDaftar {
+        gap: 7px;
+    }
+
+    .btnLoginDaftar {
+        min-width: 58px;
+        padding: 10px 9px;
+        font-size: 10px;
+    }
+
+    #KelompokMenu {
+        justify-content: flex-start;
+        overflow-x: auto;
+        gap: 9px;
+    }
+
+    .LinkMenu {
+        min-width: 105px;
+        padding: 9px;
+        font-size: 10px;
+    }
+
+    #IsiHero {
+        width: 88%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 38px 0;
+    }
+
+    #HeroTitle {
+        font-size: 39px;
+    }
+
+    #HeroDesc {
+        font-size: 14px;
+    }
+
+    #HeroActions {
+        gap: 10px;
+    }
+
+    #btnBuatLaporan,
+    #btnCekStatus {
+        min-width: 0;
+        flex: 1;
+        padding: 12px 10px;
+        font-size: 11px;
+    }
+
+    #IsiHeroKiri {
+        justify-self: center;
+        max-width: none;
+    }
+
+    #fotoKelurahan {
+        height: 240px;
+    }
+
+    #deskripsiSection {
+        width: 88%;
+        padding-top: 70px;
+    }
+
+    #JudulDeskripsi {
+        font-size: 24px;
+    }
+
+    #PDeskripsi {
+        margin-top: 25px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    #garisDeskripsi {
+        width: 95%;
+        margin-top: 50px;
+    }
+
+    #Statistik {
+        width: 88%;
+        padding-top: 55px;
+    }
+
+    #StatistikBeranda {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ItemStatistik {
+        min-height: 85px;
+    }
+
+    .ItemStatistik:nth-child(3) {
+        border-left: none;
+        border-top: 1px dotted white;
+    }
+
+    .ItemStatistik:nth-child(4) {
+        border-top: 1px dotted white;
+    }
+
+    #alur {
+        width: 88%;
+        padding: 85px 0;
+    }
+
+    #text1 {
+        margin-bottom: 35px;
+    }
+
+    #JudulAlur {
+        font-size: 26px;
+    }
+
+    .AlurGrid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding-left: 15px;
+    }
+
+    .GarisAlurTengah {
+        left: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .AreaAlur,
+    .AreaAlurKanan {
+        padding-top: 0;
+        gap: 22px;
+    }
+
+    .ItemAlur {
+        padding-left: 20px;
+        min-height: 100px;
+    }
+
+    .KotakAlur {
+        min-height: 100px;
+        padding: 18px 20px;
+    }
+
+    .ItemAlur2 .KotakAlur,
+    .ItemAlur4 .KotakAlur {
+        text-align: left;
+    }
+
+    .ItemAlur2 .deskripsiAlurItem,
+    .ItemAlur4 .deskripsiAlurItem {
+        align-self: flex-start;
+    }
+
+    .TitikAlur,
+    .AreaAlurKiri .TitikAlur,
+    .AreaAlurKanan .TitikAlur {
+        left: -19px;
+        right: auto;
+        width: 30px;
+        height: 30px;
+    }
+
+    #kategori {
+        padding: 75px 0 55px;
+    }
+
+    #kategori::before {
+        width: 110px;
+        height: 30px;
+        border-radius: 0 0 40px 0;
+    }
+
+    #IsiKategori {
+        width: 88%;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    #JudulKategori {
+        margin-bottom: 20px;
+        padding: 19px 25px;
+        font-size: 16px;
+    }
+
+    #DeskripsiKategori p {
+        max-width: 350px;
+        font-size: 14px;
+    }
+
+    #DaftarKategori {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .ItemKategori {
+        min-height: 55px;
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    #Footer {
+        padding: 35px 7% 20px;
+    }
+
+    #IsiFooter1 {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 0 0 25px;
+    }
+
+    #JudulFooter,
+    .FooterSubJudul {
+        font-size: 15px;
+    }
+
+    #FooterBawah {
+        flex-direction: column;
+        gap: 8px;
+        padding: 18px 0 0;
+    }
 }
