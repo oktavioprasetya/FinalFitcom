@@ -1,0 +1,613 @@
+:root {
+    --warna-oren:       #ff7a2f;
+    --warna-oren-tua:   #ff5a14;
+    --warna-merah:      #e8341c;
+    --warna-krem:       #efe8e1;
+    --warna-gelap:      #1f1f1f;
+    --warna-teks:       #222222;
+    --warna-border:     #222222;
+    --warna-samar:      #777777;
+
+    --font-judul: 'Bebas Neue', sans-serif;
+    --font-isi:   'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-isi);
+    color: var(--warna-teks);
+    background: var(--warna-krem);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+:focus-visible {
+    outline: 3px solid var(--warna-oren-tua);
+    outline-offset: 2px;
+}
+
+
+/* 2. NAVBAR
+   ========================================================================== */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 14px 40px;
+    background: #fff;
+    border-radius: 0 0 0 40px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-judul);
+    font-size: 40px;
+    color: var(--warna-oren-tua);
+}
+
+.brand-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    flex: 1;
+    gap: 36px;
+}
+
+.pill {
+    padding: 4px 40px;
+    font-family: var(--font-judul);
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    color: var(--warna-oren-tua);
+    border: 1.5px solid var(--warna-merah);
+    border-radius: 999px;
+    transition: background 0.15s, color 0.15s;
+}
+
+.pill:hover {
+    background: var(--warna-oren-tua);
+    color: #fff;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.icon-btn {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+    color: var(--warna-merah);
+    background: #fff;
+    border: 3px solid var(--warna-merah);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* 3. LAYOUT UTAMA
+   ========================================================================== */
+.layout {
+    display: grid;
+    grid-template-columns: 514px 1fr;
+}
+
+.konten {
+    padding: 56px 60px;
+}
+
+
+/* 4. SIDEBAR PANDUAN
+   ========================================================================== */
+.sidebar {
+    padding: 50px 35px;
+    color: #fff;
+    background: linear-gradient(
+        180deg,
+        var(--warna-oren) 0%,
+        #ff7d33 40%,
+        #ffd0b5 62%,
+        #fff 100%
+    );
+}
+
+.judul-halaman {
+    padding-left: 14px;
+    font-family: var(--font-judul);
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.judul-panduan {
+    margin-bottom: 34px;
+    padding: 36px 0 14px 66px;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 2px solid #fff;
+}
+
+/* Langkah 01 - 05 */
+.langkah {
+    position: relative;
+    list-style: none;
+}
+
+.langkah::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 40px;
+    left: 30px;
+    width: 3px;
+    background: #fff;
+}
+
+.langkah li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 34px;
+}
+
+.langkah li::after {
+    content: "";
+    width: 50px;
+    border-top: 2px dashed #fff;
+}
+
+.no {
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    margin-left: 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    background: #262626;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.kotak {
+    order: 3;
+    min-width: 264px;
+    margin: 6px;
+    padding: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #333;
+    background: #fff;
+    border: 1.5px solid var(--warna-merah);
+    border-radius: 10px;
+    outline: 8px solid #fff;
+}
+
+/* Contoh laporan */
+.label-contoh {
+    width: 337px;
+    margin: 30px 0 40px -35px;
+    padding: 14px 28px;
+    font-size: 14px;
+    color: var(--warna-teks);
+    background: #fff;
+    border-radius: 0 24px 24px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.contoh {
+    margin-bottom: 40px;
+    padding: 24px 28px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow:
+        0 4px 0 var(--warna-oren-tua),
+        0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contoh h3 {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #111;
+}
+
+.contoh.jelas h3 {
+    color: var(--warna-oren-tua);
+}
+
+.kutipan {
+    margin-bottom: 12px;
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.kutipan.kuning {
+    font-size: 15px;
+    color: #6b4e00;
+    background: #fdeeb8;
+}
+
+.kutipan.hijau {
+    padding: 14px 20px;
+    color: #1d3a22;
+    background: #d5f8dc;
+}
+
+
+/* 5. FORMULIR
+   ========================================================================== */
+.form-card {
+    max-width: 788px;
+    padding: 20px 50px 40px;
+    background: #fff;
+}
+
+/* Kepala formulir */
+.form-head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-head img {
+    width: 40px;
+}
+
+.form-head strong,
+.form-head span {
+    display: block;
+    font-size: 15px;
+}
+
+.intro {
+    max-width: 580px;
+    margin: 20px 0 6px;
+    font-size: 12px;
+    color: var(--warna-samar);
+}
+
+/* Grup field */
+.field {
+    margin-top: 28px;
+}
+
+.field-title {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 12px;
+}
+
+.field-title b {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.field-title small {
+    font-size: 16px;
+    color: #666;
+}
+
+.ico {
+    width: 34px;
+    font-size: 30px;
+    text-align: center;
+    color: var(--warna-merah);
+}
+
+/* Input teks */
+.input-pill {
+    width: 476px;
+    max-width: 100%;
+    padding: 12px 18px;
+    font: inherit;
+    font-size: 13px;
+    border: 1.5px solid var(--warna-border);
+    border-radius: 14px;
+}
+
+.input-pill::placeholder,
+.kotak-input input::placeholder,
+.textarea::placeholder {
+    color: #999;
+}
+
+/* Jenis laporan */
+.jenis-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 184px);
+    gap: 30px 56px;
+    padding-top: 10px;
+}
+
+.jenis {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 6px 18px;
+    font: 700 15px var(--font-isi);
+    background: #fff;
+    border: 1.5px solid var(--warna-border);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.jenis:hover {
+    border-color: var(--warna-oren-tua);
+}
+
+.jenis.aktif {
+    color: #fff;
+    background: var(--warna-oren-tua);
+    border-color: var(--warna-oren-tua);
+}
+
+.ico-sm {
+    font-size: 14px;
+    color: var(--warna-merah);
+}
+
+.jenis.aktif .ico-sm {
+    color: #fff;
+}
+
+/* Peta */
+.peta-box {
+    margin-top: 6px;
+    padding: 18px;
+    border: 2px dashed var(--warna-oren-tua);
+    border-radius: 20px;
+}
+
+.peta-box iframe {
+    display: block;
+    width: 100%;
+    height: 304px;
+    border: 0;
+}
+
+/* Dusun & desa */
+.dua-kolom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 78px;
+    margin-top: 50px;
+}
+
+.kotak-input {
+    display: block;
+    padding: 8px 14px 14px;
+    border: 1.5px solid var(--warna-border);
+    border-radius: 16px;
+}
+
+.kotak-input span {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.kotak-input input {
+    width: 100%;
+    padding: 3px 12px;
+    font: inherit;
+    font-size: 14px;
+    border: 1.5px solid var(--warna-border);
+    border-radius: 999px;
+}
+
+/* Upload foto */
+.upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 22px;
+    font-size: 15px;
+    border: 1.5px solid var(--warna-border);
+    border-radius: 24px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.upload b {
+    font-size: 16px;
+}
+
+.upload-ico {
+    font-size: 40px;
+    line-height: 1;
+}
+
+.upload:hover,
+.upload.drag {
+    background: #fff3ec;
+    border-color: var(--warna-oren-tua);
+}
+
+.preview {
+    display: flex;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.preview .thumb {
+    position: relative;
+    width: 120px;
+    height: 90px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+}
+
+.preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.preview button {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 22px;
+    height: 22px;
+    color: #fff;
+    background: var(--warna-border);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Deskripsi */
+.textarea {
+    width: 100%;
+    min-height: 122px;
+    padding: 18px 22px;
+    font: inherit;
+    font-size: 13px;
+    border: 1.5px solid var(--warna-border);
+    border-radius: 24px;
+    resize: vertical;
+}
+
+/* Tombol kirim */
+.btn-kirim {
+    display: block;
+    width: 314px;
+    margin: 50px auto 0;
+    padding: 10px;
+    font: 700 14px var(--font-isi);
+    color: #fff;
+    background: var(--warna-oren);
+    border: 0;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.btn-kirim:hover {
+    background: var(--warna-oren-tua);
+}
+
+
+/* 6. FOOTER
+   ========================================================================== */
+.footer {
+    padding: 50px 85px 30px;
+    color: #fff;
+    background: var(--warna-gelap);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 0.8fr;
+    gap: 50px;
+}
+
+.footer h4 {
+    margin-bottom: 14px;
+    font-family: var(--font-judul);
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.footer h4.mt {
+    margin-top: 40px;
+}
+
+.footer p,
+.footer li {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer a.aktif {
+    color: var(--warna-oren-tua);
+}
+
+.footer-bawah {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    padding-top: 30px;
+    font-size: 11px;
+    border-top: 1px solid #555;
+}
+
+
+/* 7. RESPONSIF
+   ========================================================================== */
+@media (max-width: 1000px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 14px 20px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .konten {
+        padding: 24px 16px;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+
+    .jenis-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .dua-kolom {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer {
+        padding: 40px 24px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bawah {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

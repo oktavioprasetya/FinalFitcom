@@ -51,7 +51,7 @@
                     </p>
 
                     <div id="HeroActions">
-                        <a id="btnBuatLaporan" href="#">Buat Laporan Baru</a>
+                        <a id="btnBuatLaporan" href="BuatLaporan">Buat Laporan Baru</a>
                         <a id="btnCekStatus" href="#alur">Cek Status</a>
                     </div>
                 </div>

@@ -146,3 +146,18 @@ main {
 #IsihalamanLS{
     margin-top: 0;
 }
+
+* { box-sizing: border-box; margin: 0; }
+body { font-family: 'Poppins', sans-serif; }
+.banner-laporan {
+    background: #ff5a14; padding: 60px 40px;
+    display: flex; justify-content: center;
+}
+.tombol-laporan {
+    background: #262626; color: #fff; text-decoration: none;
+    font-weight: 700; font-size: 15px;
+    padding: 18px 56px; border-radius: 999px;
+    transition: transform .15s, background .15s;
+}
+.tombol-laporan:hover { background: #000; transform: translateY(-2px); }
+.tombol-laporan:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }

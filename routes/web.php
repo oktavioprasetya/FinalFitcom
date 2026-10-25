@@ -13,3 +13,11 @@ Route::get('/Beranda', function(){
 
 Route::get('/LaporanSaya', [LaporanController::class, 'index'])
     ->name('laporan');
+
+
+Route::get('/BuatLaporan', function () {
+    return view('BuatLaporan');
+})->name('BuatLaporan');
+
+Route::post('/laporan', [LaporanController::class, 'simpan'])
+    ->name('laporan.simpan');
