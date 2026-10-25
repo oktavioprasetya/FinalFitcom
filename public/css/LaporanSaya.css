@@ -88,3 +88,104 @@
     color: #ffffff;
      border: 3px solid #ffffff;
 }
+
+
+
+
+
+.LaftarLaporan {
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #292929;
+}
+
+.HeaderLaporan,
+.BarisLaporan {
+    display: grid;
+    grid-template-columns: 1.1fr 2.5fr 1.2fr 1fr 1.2fr;
+    align-items: center;
+    column-gap: 20px;
+    margin-top: 50px;
+}
+
+.HeaderLaporan {
+    padding: 0 12px 15px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 90px;
+    
+}
+
+.BarisLaporan {
+    min-height: 65px;
+    margin-bottom: 16px;
+    padding: 0 12px;
+    background-color: #fff;
+    border-radius: 12px;
+    border-bottom: 3px solid #ff6b35;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.nomor {
+    font-size: 14px;
+}
+
+.lokasi {
+    line-height: 1.5;
+}
+
+.kategori,
+.tanggal {
+    font-size: 11px;
+}
+
+.status {
+    display: block;
+    width: 100%;
+    padding: 3px 5px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.StatusTerbaru {
+    background-color: #ffbd00;
+}
+
+.StatusSedangDiproses {
+    background-color: #ff782f;
+}
+
+.StatusSelesai {
+    background-color: #333;
+}
+
+.StatusDitolak {
+    background-color: #ed0000;
+}
+
+.LaporanKosong {
+    padding: 20px;
+    text-align: center;
+    color: #777;
+}
+
+@media (max-width: 768px) {
+    .DaftarLaporan {
+        overflow-x: auto;
+        padding: 15px;
+    }
+
+    .HeaderLaporan,
+    .BarisLaporan {
+        min-width: 750px;
+    }
+}

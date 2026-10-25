@@ -70,6 +70,45 @@
             <button class="PilihanStatus">Selesai</button>
             <button class="PilihanStatus">Ditolak</button>
         </div>
+        <div class="DaftarLaporan">
+
+    <div class="HeaderLaporan">
+        <span>Nomor Laporan</span>
+        <span>Lokasi</span>
+        <span>Kategori</span>
+        <span>Tanggal</span>
+        <span>Status</span>
+    </div>
+
+    @forelse ($laporan as $item)
+        <div class="BarisLaporan">
+
+            <span class="nomor">
+                {{ $item->no_laporan }}
+            </span>
+
+            <span class="lokasi">
+                {{ $item->lokasi }}
+            </span>
+
+            <span class="kategori">
+                {{ $item->kategori }}
+            </span>
+
+            <span class="tanggal">
+                {{ \Carbon\Carbon::parse($item->tanggal)->translatedFormat('d F Y') }}
+            </span>
+
+            <span class="status status-{{ strtolower(str_replace(' ', '-', $item->status)) }}">
+                {{ $item->status }}
+            </span>
+
+        </div>
+    @empty
+        <p class="LaporanKosong">Belum ada laporan.</p>
+    @endforelse
+
+</div>
     </main>
     <footer id="Footer">
         <div id="IsiFooter1">
