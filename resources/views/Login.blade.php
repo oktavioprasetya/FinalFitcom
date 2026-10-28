@@ -61,7 +61,7 @@
                     <!-- Email -->
                     <div class="InputGrup">
 
-                        <img src="" alt="" class="IkonInput">
+                        <img src="{{asset('/images/Email.svg')}}" alt="" class="IkonInput">
 
                         <input
                             type="email"
@@ -76,7 +76,7 @@
                     <!-- Password -->
                     <div class="InputGrup">
 
-                        <img src="" alt="" class="IkonInput">
+                        <img src="{{asset('/images/Password2.svg')}}" alt="" class="IkonInput">
 
                         <input
                             type="password"
@@ -91,7 +91,7 @@
                             class="TombolPassword"
                             onclick="LihatPassword()"
                         >
-                            <img src="" alt="">
+                            <img src="{{asset('/images/Sembunyikan.svg')}}" alt="">
                         </button>
 
                     </div>

@@ -46,7 +46,7 @@
                 <div id="HeaderProfil">
 
                     <div id="FotoProfil">
-                        <img src="" alt="">
+                        <img src="{{asset('/images/Profil.svg')}}" alt="">
                     </div>
 
                     <div id="NamaPengguna">
@@ -90,7 +90,7 @@
 
                 <div class="BarisKontak">
 
-                    <img src="" alt="">
+                    <img src="{{asset('/images/Email.svg')}}" alt="">
 
                     <span>{{ $Pengguna->email }}</span>
 
@@ -98,7 +98,7 @@
 
                 <div class="BarisKontak">
 
-                    <img src="" alt="">
+                    <img src="{{asset('/images/Telepon.svg')}}" alt="">
 
                     <span>{{ $Pengguna->no_telepon ?? '-' }}</span>
 
@@ -118,77 +118,39 @@
 
     </main>
 
-
-    <!-- FOOTER -->
-    <footer id="Footer">
-
+<footer id="Footer">
         <div id="IsiFooter1">
-
             <div id="Isi1">
-
                 <h3 id="JudulFooter">LaporDesa</h3>
-
-                <p class="IsiFooter">
-                    Kanal resmi warga Desa Sumbersari untuk melaporkan
-                    dan memantau <br>
-                    penyelesaian masalah di lingkungan sekitar.
-                </p>
-
-                <br><br>
-
+                 <p class="IsiFooter">Kanal resmi warga Ngastemi untuk melaporkan 
+                                      dan memantau <br> penyelesaian masalah di
+                                    lingkungan sekitar.</p>   <br><br>
+                
                 <p class="FooterSubJudul"><b>Kontak</b></p>
-
-                <p class="IsiFooter">082245930654</p>
+                <p class="IsiFooter">08867544545</p>   
 
             </div>
-
-
             <div id="Isi2">
-
                 <p class="FooterSubJudul"><b>Kantor Desa</b></p>
-
-                <p class="IsiFooter">
-                    Jl. Belimbing No.5, Ngingas, Ngastemi,<br>
-                    Kec. Bangsal, Kabupaten Mojokerto,<br>
-                    Jawa Timur 61381
-                </p>
-
+                <p class="IsiFooter">Jl. Belimbing No.5, Ngingas, Ngastemi,<br>
+                                  Kec. Bangsal, Kabupaten Mojokerto,<br>
+                                  Jawa Timur 61381</p>   
             </div>
-
-
             <div id="Isi3">
-
-                <div class="FooterSubJudul"><b>Tautan</b></div>
-
-                <br>
-
-                <div class="TautanFooter">Beranda</div>
-                <div class="TautanFooter">Buat Laporan</div>
-                <div class="TautanFooter">Daftar Laporan</div>
-                <div class="TautanFooter">Laporan Saya</div>
-                <div class="TautanFooter">Notifikasi</div>
-                <div class="TautanFooter">Profil</div>
-
+                <div class="FooterSubJudul"><b>Tautan</b></div><br>
+                <div class="TautanFooter"><a href="{{route('beranda')}}"></a>Beranda</div>
+                <div class="TautanFooter"><a href="{{route('laporan.create')}}"></a>Buat Laporan</div>
+                <div class="TautanFooter"><a href="{{route('daftar.laporan')}}"></a>Daftar Laporan</div>
+                <div class="TautanFooter"><a href="{{route('laporan')}}">Laporan Saya</div>
+                <div class="TautanFooter"><a href="#">Notifikasi</div>
+                <div class="TautanFooter"><a href="{{route('profil')}}">Profil</div>
             </div>
-
-        </div>
-
-        <br>
-
-        <hr>
-
-        <div id="FooterBawah">
-
-            <p class="TextBawahFooter">
-                © 2026 Pemerintah Desa Ngastemi
-            </p>
-
-            <p class="TextBawahFooter">
-                Layanan ini gratis untuk seluruh warga desa Ngastemi
-            </p>
-
-        </div>
-
+        </div><br>
+         <hr>
+         <div id="FooterBawah">
+                <p class="TextBawahFooter">© 2026 Pemerintah Desa Ngastemi</p>
+                <p class="TextBawahFooter">Layanan ini gratis untuk seluruh warga desa Ngastemi</p>
+            </div>
     </footer>
 
 </body>

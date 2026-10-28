@@ -17,7 +17,7 @@
     <nav id="navbar">
         <div id="IsiNavbar">
             <div id="Logo">
-                <h2>LaporDesa</h2>
+                <h2>LaporDesa</h4>
             </div>
             <div id="KelompokMenu">
                 <a href="{{ route('beranda')}}" class="LinkMenu">Beranda</a>
@@ -135,7 +135,7 @@
 
                 <div class="JudulFormulir">
 
-                    <img src="" alt="" class="LogoFormulir">
+                    <img src="{{asset('/images/Logo.svg')}}" alt="" class="LogoFormulir">
 
                     <div>
                         <strong>Formulir Pelaporan</strong>
@@ -175,7 +175,7 @@
                     <div class="JudulBagian">
 
 
-                        <img src="" alt="" class="IkonBagian">
+                        <img src="{{asset('/images/Profil.svg')}}" alt="" class="IkonBagian">
 
                         <div>
                             <b>Nama Pelapor</b>
@@ -199,7 +199,7 @@
                     <div class="JudulBagian">
 
 
-                        <img src="" alt="" class="IkonBagian">
+                        <img src="{{asset('/images/Menu.svg')}}" alt="" class="IkonBagian">
 
                         <div>
                             <b>Jenis Laporan</b>
@@ -229,8 +229,7 @@
                                 {{ old('kategori') == $jenis ? 'checked' : '' }}
                                 required>
 
-                            <img src="" alt="" class="IkonKecil">
-
+                          
                             <span>{{ $jenis }}</span>
 
                         </label>
@@ -247,7 +246,7 @@
                     <div class="JudulBagian">
 
 
-                        <img src="" alt="" class="IkonBagian">
+                        <img src="{{asset('/images/Lokasi.svg')}}" alt="" class="IkonBagian">
 
                         <div>
                             <b>Lokasi Kejadian</b>
@@ -284,11 +283,11 @@
                     <div class="JudulBagian">
 
 
-                        <img src="" alt="" class="IkonBagian">
+                        <img src="{{asset('/images/UnggahFoto.svg')}}" alt="" class="IkonBagian">
 
                         <div>
                             <b>Foto Tempat</b>
-                            <small>Unggah 1 foto kerusakan (opsional)</small>
+                            <small>Unggah maksimal 1 foto kerusakan</small>
                         </div>
 
                     </div>
@@ -297,7 +296,7 @@
                     <label for="FotoInput" class="AreaUnggah">
 
     
-                        <img src="" alt="" class="IkonUnggah">
+                        <img src="{{asset('/images/Cloud.svg')}}" alt="" class="IkonUnggah">
 
                         <b>Klik untuk mengunggah foto</b>
 
@@ -324,7 +323,7 @@
                     <div class="JudulBagian">
 
 
-                        <img src="" alt="" class="IkonBagian">
+                        <img src="{{asset('/images/Deskripsi.svg')}}" alt="" class="IkonBagian">
 
                         <div>
                             <b>Deskripsi</b>
@@ -374,12 +373,12 @@
             </div>
             <div id="Isi3">
                 <div class="FooterSubJudul"><b>Tautan</b></div><br>
-                <div class="TautanFooter"><a href="{{ route('beranda') }}">Beranda</a></div>
-                <div class="TautanFooter"><a href="{{ route('laporan.create') }}">Buat Laporan</a></div>
-                <div class="TautanFooter"><a href="{{ route('daftar.laporan') }}">Daftar Laporan</a></div>
-                <div class="TautanFooter"><a href="{{ route('laporan') }}">Laporan Saya</a></div>
-                <div class="TautanFooter"><a href="#">Notifikasi</a></div>
-                <div class="TautanFooter"><a href="{{ route('profil') }}">Profil</a></div>
+                <div class="TautanFooter"><a href="{{route('beranda')}}"></a>Beranda</div>
+                <div class="TautanFooter"><a href="{{route('laporan.create')}}"></a>Buat Laporan</div>
+                <div class="TautanFooter"><a href="{{route('daftar.laporan')}}"></a>Daftar Laporan</div>
+                <div class="TautanFooter"><a href="{{route('laporan')}}">Laporan Saya</div>
+                <div class="TautanFooter"><a href="#">Notifikasi</div>
+                <div class="TautanFooter"><a href="{{route('profil')}}">Profil</div>
             </div>
         </div><br>
         <hr>

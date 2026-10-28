@@ -59,7 +59,7 @@
 
                 <!-- Nama -->
                 <div class="GrupInput">
-                    <img src="" alt="" class="IkonInput">
+                    <img src="{{asset('/images/Profil.svg')}}" alt="" class="IkonInput">
 
                     <input
                         type="text"
@@ -73,7 +73,7 @@
 
                 <!-- Email -->
                 <div class="GrupInput">
-                    <img src="" alt="" class="IkonInput">
+                    <img src="{{asset('/images/Email.svg')}}" alt="" class="IkonInput">
 
                     <input
                         type="email"
@@ -87,7 +87,7 @@
 
                 <!-- Nomor Telepon -->
                 <div class="GrupInput">
-                    <img src="" alt="" class="IkonInput">
+                    <img src="{{asset('/images/Telepon.svg')}}" alt="" class="IkonInput">
 
                     <input
                         type="tel"
@@ -101,7 +101,7 @@
 
                 <!-- Password -->
                 <div class="GrupInput">
-                    <img src="" alt="" class="IkonInput">
+                    <img src="{{asset('/images/Password2.svg')}}" alt="" class="IkonInput">
 
                     <input
                         type="password"
@@ -114,7 +114,7 @@
 
                 <!-- Konfirmasi Password -->
                 <div class="GrupInput">
-                    <img src="" alt="" class="IkonInput">
+                    <img src="{{asset('/images/Password2.svg')}}" alt="" class="IkonInput">
 
                     <input
                         type="password"
