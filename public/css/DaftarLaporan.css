@@ -1,0 +1,288 @@
+/* DASAR HALAMAN */
+
+body {
+    margin: 0;
+    background-color: #efe9e3;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* HEADER LAPORAN */
+
+#HeaderLaporan {
+    width: 100%;
+    min-height: 275px;
+    padding: 30px 6.5% 24px;
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        110deg,
+        #ff7938,
+        #f63f20
+    );
+}
+
+#BagianJudul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+#JudulHalaman {
+    margin: 0;
+    color: white;
+
+    font-family: 'Anton', sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+
+/* PENCARIAN */
+
+#KelompokPencarian {
+    width: 200px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 0 10px;
+    box-sizing: border-box;
+
+    background-color: white;
+    border-radius: 20px;
+}
+
+#IkonPencarian {
+    width: 18px;
+    height: 18px;
+}
+
+#InputPencarian {
+    width: 100%;
+    border: none;
+    outline: none;
+
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+
+/* RINGKASAN LAPORAN */
+
+#RingkasanLaporan {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.25fr;
+    gap: 30px;
+    padding: 0 10px;
+}
+
+.KartuRingkasan {
+    height: 155px;
+    padding: 25px 28px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    border-radius: 15px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+
+    color: white;
+}
+
+.KartuRingkasan strong {
+    font-family: 'Anton', sans-serif;
+    font-size: 48px;
+    font-weight: normal;
+}
+
+.KartuRingkasan span {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.KartuDiproses {
+    background-color: #ff4b00;
+}
+
+.KartuDiterima {
+    background-color: #ffc400;
+}
+
+.KartuTotal {
+    background-color: #302f2e;
+}
+
+.KartuTotal span {
+    line-height: 1.3;
+}
+
+
+/* KONTEN DAFTAR */
+
+#KontenLaporan {
+    min-height: 800px;
+    padding: 40px 6.5% 70px;
+    box-sizing: border-box;
+}
+
+
+/* FILTER */
+
+#KelompokFilter {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.TombolFilter {
+    min-width: 120px;
+    padding: 4px 20px;
+
+    border: 1px dashed #777;
+    border-radius: 20px;
+
+    background-color: white;
+    color: #222;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.TombolFilter.Aktif {
+    background-color: #302f2e;
+    border: 1px solid #302f2e;
+    color: white;
+}
+
+
+/* HEADER KOLOM */
+
+#HeaderTabel {
+    display: grid;
+    grid-template-columns: 1.05fr 2.5fr 1fr 1fr 1fr;
+    gap: 20px;
+
+    padding: 0 14px;
+    margin-bottom: 15px;
+
+    color: #111;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* BARIS LAPORAN */
+
+#DaftarDataLaporan {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.BarisLaporan {
+    display: grid;
+    grid-template-columns: 1.05fr 2.5fr 1fr 1fr 1fr;
+    gap: 20px;
+
+    align-items: center;
+
+    min-height: 50px;
+    padding: 12px 14px;
+    box-sizing: border-box;
+
+    background-color: white;
+    border-radius: 12px;
+    border-bottom: 3px solid #ff6a2c;
+
+    color: #222;
+    text-decoration: none;
+
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+.BarisLaporan:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.NomorLaporan {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.LokasiLaporan {
+    line-height: 1.5;
+}
+
+.KategoriLaporan {
+    font-weight: 500;
+}
+
+.TanggalLaporan {
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* STATUS */
+
+.KolomStatus {
+    display: flex;
+    justify-content: center;
+}
+
+.LabelStatus {
+    display: block;
+    width: 100%;
+    padding: 3px 5px;
+    box-sizing: border-box;
+
+    border-radius: 20px;
+
+    color: white;
+    text-align: center;
+
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.StatusDiterima {
+    background-color: #ffc400;
+}
+
+.StatusDiproses {
+    background-color: #ff7938;
+}
+
+.StatusSelesai {
+    background-color: #269b59;
+}
+
+.StatusDitolak {
+    background-color: #d93636;
+}
+
+
+/* PESAN KOSONG */
+
+#PesanKosong,
+#PesanTidakDitemukan {
+    padding: 20px;
+    color: #555;
+    text-align: center;
+    font-size: 14px;
+}

@@ -16,19 +16,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav id="navbar">
+ <nav id="navbar">
         <div id="IsiNavbar">
             <div id="Logo">
                 <h2>LaporDesa</h4>
             </div>
             <div id="KelompokMenu">
-                <a href="#" class="LinkMenu">Beranda</a>
-                <a href="#" class="LinkMenu">Laporan Saya</a>
-                <a href="#" class="LinkMenu">Daftar Laporan</a>
+                <a href="{{ route('beranda')}}" class="LinkMenu">Beranda</a>
+                <a href="{{ route('laporan')}}" class="LinkMenu">Laporan Saya</a>
+                <a href="{{ route('daftar.laporan')}}" class="LinkMenu">Daftar Laporan</a>
             </div>
             <div id="KelompokLoginDaftar">
-                <button class="btnLoginDaftar">Login</button>
-                <button class="btnLoginDaftar">Daftar</button>
+                <a href="{{route('login')}}" class="btnLoginDaftar">Login</a>
+                <a href="{{route('registrasi')}}" class="btnLoginDaftar">Daftar</a>
             </div>
 
         </div>
@@ -38,7 +38,7 @@
         <div id="IsiFooter1">
             <div id="Isi1">
                 <h3 id="JudulFooter">LaporDesa</h3>
-                 <p class="IsiFooter">Kanal resmi warga Desa Sumbersari untuk melaporkan 
+                 <p class="IsiFooter">Kanal resmi warga Ngastemi untuk melaporkan 
                                       dan memantau <br> penyelesaian masalah di
                                     lingkungan sekitar.</p>   <br><br>
                 
@@ -54,12 +54,12 @@
             </div>
             <div id="Isi3">
                 <div class="FooterSubJudul"><b>Tautan</b></div><br>
-                <div class="TautanFooter">Beranda</div>
-                <div class="TautanFooter">Buat Laporan</div>
-                <div class="TautanFooter">Daftar Laporan</div>
-                <div class="TautanFooter">Laporan Saya</div>
-                <div class="TautanFooter">Notifikasi</div>
-                <div class="TautanFooter">Profil</div>
+                <div class="TautanFooter"><a href="{{route('beranda')}}"></a>Beranda</div>
+                <div class="TautanFooter"><a href="{{route('laporan.create')}}"></a>Buat Laporan</div>
+                <div class="TautanFooter"><a href="{{route('daftar.laporan')}}"></a>Daftar Laporan</div>
+                <div class="TautanFooter"><a href="{{route('laporan')}}">Laporan Saya</div>
+                <div class="TautanFooter"><a href="#">Notifikasi</div>
+                <div class="TautanFooter"><a href="{{route('profil')}}">Profil</div>
             </div>
         </div><br>
          <hr>

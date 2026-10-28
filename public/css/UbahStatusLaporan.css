@@ -1,0 +1,349 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 55px 8%;
+    background: #ffffff;
+    color: #1f1f1f;
+    font-family: 'Poppins', sans-serif;
+}
+
+#KontenUtama {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+}
+
+/* HEADER */
+
+#HeaderHalaman {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 42px;
+}
+
+#HeaderHalaman h1 {
+    flex: 1;
+    margin: 0;
+    padding: 17px 42px;
+    background: #ff4b00;
+    color: white;
+    border-radius: 50px;
+    font-size: 28px;
+}
+
+#TombolKembali {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 86px;
+    height: 78px;
+
+    color: #ff4b00;
+    background: #1f1f1f;
+    border-radius: 50%;
+
+    text-decoration: none;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+#TombolKembali img {
+    display: none;
+}
+
+/* KELOMPOK KONTEN */
+
+#KelompokKonten {
+    display: grid;
+    grid-template-columns: 1.25fr 0.9fr;
+    gap: 45px;
+    align-items: stretch;
+}
+
+/* DETAIL LAPORAN */
+
+#BagianDetail {
+    padding: 28px;
+    border: 2px solid #ff4b00;
+    border-radius: 24px;
+    min-width: 0;
+}
+
+.JudulKecil {
+    margin: 0 0 30px;
+    font-size: 17px;
+}
+
+#NomorLaporan {
+    margin: 0 25px 15px;
+    font-size: 22px;
+}
+
+#GarisPemisah {
+    width: 80%;
+    margin: 0 auto 35px;
+    border: none;
+    border-top: 2px dashed #777777;
+}
+
+.BarisInformasi {
+    display: grid;
+    grid-template-columns: 125px 15px minmax(0, 1fr);
+    gap: 10px;
+    align-items: start;
+    margin: 0 20px 20px;
+}
+
+.BarisInformasi p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+#BarisTitikLokasi {
+    align-items: center;
+    margin-top: 30px;
+}
+
+#TombolMaps {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    width: fit-content;
+    padding: 5px 12px;
+
+    color: #1f1f1f;
+    border: 1px solid #ff4b00;
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-size: 13px;
+}
+
+#TombolMaps img {
+    width: 15px;
+    height: 15px;
+}
+
+/* DESKRIPSI */
+
+.JudulBagian {
+    margin: 28px 15px 20px;
+    font-size: 21px;
+}
+
+#KotakDeskripsi {
+    min-height: 110px;
+    margin: 0 28px;
+    padding: 18px;
+
+    border: 1px solid #333333;
+    border-radius: 20px;
+
+    font-size: 13px;
+    overflow-wrap: anywhere;
+    white-space: pre-line;
+}
+
+/* FOTO */
+
+#KelompokFoto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0 28px 20px;
+}
+
+.FotoLaporan {
+    display: block;
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+
+    padding: 5px;
+    border: 2px dashed #ff4b00;
+    border-radius: 17px;
+}
+
+#FotoKosong {
+    margin-left: 28px;
+    color: #777777;
+    font-size: 13px;
+}
+
+/* FORM UBAH STATUS */
+
+#BagianUbahStatus {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+
+    padding: 25px 28px 35px;
+    color: white;
+    background: #1f1f1f;
+    border-radius: 24px;
+    box-shadow: 0 3px 4px #00000030;
+}
+
+#BagianUbahStatus h2 {
+    margin: 0 0 20px;
+    text-align: center;
+    font-size: 21px;
+}
+
+/* INFORMASI STATUS */
+
+#InformasiStatus {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    margin-bottom: 65px;
+    padding: 14px 18px;
+
+    background: #4a3024;
+    border: 1px solid #ff4b00;
+    border-radius: 18px;
+}
+
+#InformasiStatus img {
+    width: 22px;
+    height: 22px;
+}
+
+#InformasiStatus p {
+    margin: 0;
+    color: #f0dfd5;
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+/* INPUT FORM */
+
+#FormStatus {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#FormStatus label {
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#PilihanStatus {
+    width: 100%;
+    margin-bottom: 42px;
+    padding: 12px 15px;
+
+    color: white;
+    background: #1f1f1f;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 14px;
+}
+
+#PilihanStatus option {
+    color: white;
+    background: #1f1f1f;
+}
+
+#CatatanAdmin {
+    width: 100%;
+    min-height: 160px;
+    margin-bottom: 30px;
+    padding: 15px;
+
+    color: white;
+    background: #1f1f1f;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 13px;
+    resize: vertical;
+}
+
+#CatatanAdmin::placeholder {
+    color: #aaaaaa;
+}
+
+/* PESAN ERROR */
+
+#PesanError {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    color: #ffffff;
+    background: #842020;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+#PesanError ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* TOMBOL */
+
+#KelompokTombol {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+}
+
+#TombolBatal,
+#TombolSimpan {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 54px;
+    padding: 10px;
+
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#TombolBatal {
+    flex: 1;
+    color: white;
+    background: #1f1f1f;
+    border: 1px solid white;
+}
+
+#TombolSimpan {
+    flex: 1.2;
+    color: white;
+    background: #ff7938;
+    border: none;
+}
+
+#TombolBatal:hover {
+    background: #333333;
+}
+
+#TombolSimpan:hover {
+    background: #ff4b00;
+}
+#PesanBerhasil {
+    padding: 12px;
+    color: #ffffff;
+    background: #267b42;
+    border-radius: 10px;
+    font-size: 13px;
+}

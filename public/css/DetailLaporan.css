@@ -1,0 +1,215 @@
+/* KONTEN DETAIL LAPORAN */
+#RectangleDetail {
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: -1;
+    margin: 0;
+    pointer-events: none;
+}
+#KontenDetail {
+padding: 100px 6% 80px;
+min-height: 900px;
+}
+
+#JudulHalaman {
+font-family: "Anton", sans-serif;
+color: #fbfafa;
+margin-bottom: 30px;
+}
+
+/* STATUS LAPORAN */
+
+#BagianStatus {
+background-color: white;
+border: 2px solid #ff4f00;
+border-radius: 25px;
+padding: 25px;
+margin-bottom: 40px;
+}
+
+#HeaderStatus {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+}
+
+#HeaderStatus h2 {
+font-family: "Poppins", sans-serif;
+font-size: 18px;
+}
+
+.TextKecil {
+font-size: 10px;
+}
+
+#LabelStatus {
+display: flex;
+gap: 10px;
+}
+
+.LabelKategori,
+.LabelProses {
+border-radius: 20px;
+padding: 5px 15px;
+font-size: 11px;
+}
+
+.LabelKategori {
+border: 1px solid #ff4f00;
+}
+
+.LabelProses {
+background-color: #ff762f;
+color: white;
+}
+
+/* ALUR STATUS */
+
+#AlurStatus {
+display: flex;
+align-items: flex-start;
+max-width: 650px;
+margin: 30px auto 0;
+}
+
+.TahapStatus {
+text-align: center;
+min-width: 65px;
+}
+
+.LingkaranStatus {
+width: 27px;
+height: 27px;
+margin: auto auto 15px;
+border-radius: 50%;
+background-color: #d9d9d9;
+}
+
+.TahapStatus.Aktif .LingkaranStatus {
+background-color: #ffbd00;
+}
+
+.TahapStatus p {
+font-size: 12px;
+font-weight: bold;
+}
+
+.GarisStatus {
+height: 2px;
+background-color: #bdbdbd;
+flex: 1;
+margin-top: 13px;
+}
+
+/* DESKRIPSI DAN INFO */
+
+#KelompokDetail {
+display: grid;
+grid-template-columns: 1.3fr 0.9fr;
+align-items: start;
+gap: 25px;
+}
+
+.KotakDetail {
+background-color: white;
+border: 2px solid #ff4f00;
+border-radius: 25px;
+padding: 30px;
+}
+
+.JudulKotak {
+font-family: "Poppins", sans-serif;
+font-size: 16px;
+margin-bottom: 15px;
+}
+
+#IsiDeskripsi {
+font-family: "Poppins", sans-serif;
+font-size: 12px;
+line-height: 1.6;
+overflow-wrap: anywhere;
+}
+
+/* FOTO LAPORAN */
+
+#KelompokFoto {
+margin-top: 20px;
+}
+
+.BingkaiFoto {
+border: 1px dashed #ff762f;
+border-radius: 25px;
+padding: 12px;
+margin-bottom: 25px;
+}
+
+.FotoLaporan {
+display: block;
+width: 100%;
+height: 130px;
+object-fit: cover;
+border-radius: 20px;
+}
+
+.FotoKosong {
+font-size: 12px;
+color: #777;
+}
+
+/* INFORMASI LAPORAN */
+
+.BarisInformasi {
+display: flex;
+justify-content: space-between;
+gap: 15px;
+padding: 12px 0;
+border-bottom: 1px solid #ccc;
+font-family: "Poppins", sans-serif;
+font-size: 11px;
+}
+
+.BarisInformasi strong {
+text-align: right;
+overflow-wrap: anywhere;
+}
+
+/* TOMBOL KEMBALI */
+
+#TombolKembali {
+display: inline-block;
+margin-top: 25px;
+padding: 10px 20px;
+background-color: #ff4f00;
+color: white;
+border-radius: 20px;
+text-decoration: none;
+font-family: "Poppins", sans-serif;
+font-size: 12px;
+}
+
+@media (max-width: 768px) {
+#KontenDetail {
+padding: 100px 5% 60px;
+}
+
+#HeaderStatus {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#LabelStatus {
+    flex-wrap: wrap;
+}
+
+#KelompokDetail {
+    grid-template-columns: 1fr;
+}
+
+.KotakDetail {
+    padding: 20px;
+}
+
+}

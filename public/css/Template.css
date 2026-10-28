@@ -74,6 +74,12 @@ body {
     gap: 20px;
 }
 
+a{
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 
 #Footer {
     background-color: #1c1c1c;
@@ -103,9 +109,11 @@ body {
     font-size: large;
 }
 
-.TautanFooter {
+.TautanFooter,
+.TautanFooter:link,
+.TautanFooter:visited {
     color: #ffffff;
-    font-family: "Smooch sans", sans-serif;
+    font-family: "Smooch Sans", sans-serif;
     text-decoration: none;
 }
 
@@ -113,7 +121,12 @@ body {
     color: #ff4f00;
 }
 
-.TautanFooterLink{
+.TautanFooter:active {
+    color: #ff4f00;
+}
+
+.TautanFooterLink,
+.TautanFooterLink:visited {
     text-decoration: none;
     color: #ffffff;
 }
@@ -141,7 +154,7 @@ hr {
 }
 
 main {
-    height: 2000px;
+    height: auto;
 }
 #IsihalamanLS{
     margin-top: 0;

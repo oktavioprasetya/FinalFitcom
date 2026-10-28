@@ -6,30 +6,30 @@
     <title>LaporDesa | Beranda</title>
 
     <link rel="stylesheet" href="{{ asset('css/Beranda.css') }}">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&family=Smooch+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <nav id="navbar">
+   <nav id="navbar">
         <div id="IsiNavbar">
-            <a href="{{ asset('/images/logoLaporDesa') }}" alt="logo" id="Logo"></a>
-            <h2>LaporDesa</h2>
-            
+            <div id="Logo">
+                <h2>LaporDesa</h4>
+            </div>
             <div id="KelompokMenu">
-                <a href="{{ route('beranda') }}" class="LinkMenu aktif">Beranda</a>
-                <a href="{{ route('laporan') }}" class="LinkMenu">Laporan Saya</a>
-                <a href="#" class="LinkMenu">Daftar Laporan</a>
+                <a href="{{ route('beranda')}}" class="LinkMenu">Beranda</a>
+                <a href="{{ route('laporan')}}" class="LinkMenu">Laporan Saya</a>
+                <a href="{{ route('daftar.laporan')}}" class="LinkMenu">Daftar Laporan</a>
+            </div>
+            <div id="KelompokLoginDaftar">
+                <a href="{{route('login')}}" class="btnLoginDaftar">Login</a>
+                <a href="{{route('registrasi')}}" class="btnLoginDaftar">Daftar</a>
             </div>
 
-            <div id="KelompokLoginDaftar">
-                <a href="#" class="btnLoginDaftar">Login</a>
-                <a href="#" class="btnLoginDaftar">Daftar</a>
-            </div>
         </div>
     </nav>
-
     <main>
         <!-- HERO -->
         <section id="Hero">
@@ -51,7 +51,7 @@
                     </p>
 
                     <div id="HeroActions">
-                        <a id="btnBuatLaporan" href="#">Buat Laporan Baru</a>
+                        <a id="btnBuatLaporan" href="BuatLaporan">Buat Laporan Baru</a>
                         <a id="btnCekStatus" href="#alur">Cek Status</a>
                     </div>
                 </div>
@@ -209,50 +209,39 @@
             </div>
         </section>
     </main>
-
-    <!-- FOOTER -->
-    <footer id="Footer">
+<footer id="Footer">
         <div id="IsiFooter1">
             <div id="Isi1">
                 <h3 id="JudulFooter">LaporDesa</h3>
-                <p class="IsiFooter">
-                    Kanal informasi warga Desa Ngastemi untuk
-                    melaporkan dan memantau penyelesaian masalah
-                    di lingkungan sekitar.
-                </p>
+                 <p class="IsiFooter">Kanal resmi warga Ngastemi untuk melaporkan 
+                                      dan memantau <br> penyelesaian masalah di
+                                    lingkungan sekitar.</p>   <br><br>
+                
+                <p class="FooterSubJudul"><b>Kontak</b></p>
+                <p class="IsiFooter">08867544545</p>   
 
-                <p class="FooterSubJudul">Kontak</p>
-                <p class="IsiFooter">08867544545</p>
             </div>
-
             <div id="Isi2">
-                <h3 class="FooterSubJudul">Kantor Desa</h3>
-                <p class="IsiFooter">
-                    Jl. Belimbing No. 5, Ngastemi,<br>
-                    Kec. Bangsal, Kabupaten Mojokerto,<br>
-                    Jawa Timur 61381
-                </p>
+                <p class="FooterSubJudul"><b>Kantor Desa</b></p>
+                <p class="IsiFooter">Jl. Belimbing No.5, Ngingas, Ngastemi,<br>
+                                  Kec. Bangsal, Kabupaten Mojokerto,<br>
+                                  Jawa Timur 61381</p>   
             </div>
-
             <div id="Isi3">
-                <h3 class="FooterSubJudul">Tautan</h3>
-                <a href="{{ route('beranda') }}" class="TautanFooterLink aktif-footer">Beranda</a>
-                <a href="#" class="TautanFooterLink">Buat Laporan</a>
-                <a href="#" class="TautanFooterLink">Daftar Laporan</a>
-                <a href="{{ route('laporan') }}" class="TautanFooterLink">Laporan Saya</a>
-                <a href="#" class="TautanFooterLink">Notifikasi</a>
-                <a href="#" class="TautanFooterLink">Profil</a>
+                <div class="FooterSubJudul"><b>Tautan</b></div><br>
+                <div class="TautanFooter"><a href="{{route('beranda')}}"></a>Beranda</div>
+                <div class="TautanFooter"><a href="{{route('laporan.create')}}"></a>Buat Laporan</div>
+                <div class="TautanFooter"><a href="{{route('daftar.laporan')}}"></a>Daftar Laporan</div>
+                <div class="TautanFooter"><a href="{{route('laporan')}}">Laporan Saya</div>
+                <div class="TautanFooter"><a href="#">Notifikasi</div>
+                <div class="TautanFooter"><a href="{{route('profil')}}">Profil</div>
             </div>
-        </div>
-
-        <div id="FooterBawah">
-            <p class="TextBawahFooter">
-                &copy; 2026 Pemerintah Desa Ngastemi
-            </p>
-            <p class="TextBawahFooter">
-                Layanan ini gratis untuk seluruh warga Desa Ngastemi
-            </p>
-        </div>
+        </div><br>
+         <hr>
+         <div id="FooterBawah">
+                <p class="TextBawahFooter">© 2026 Pemerintah Desa Ngastemi</p>
+                <p class="TextBawahFooter">Layanan ini gratis untuk seluruh warga desa Ngastemi</p>
+            </div>
     </footer>
 </body>
 </html>

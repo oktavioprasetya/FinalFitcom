@@ -1,0 +1,261 @@
+/* DASAR HALAMAN */
+
+body {
+    margin: 0;
+    background-color: #efe9e3;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* KONTEN PROFIL */
+
+#KontenProfil {
+    position: relative;
+    min-height: 850px;
+    padding: 18px 6.5% 70px;
+    box-sizing: border-box;
+    background-color: #efe9e3;
+}
+
+#KontenProfil::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140px;
+
+    background: linear-gradient(
+        110deg,
+        #ff7938,
+        #ff4b00
+    );
+
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 50% 100%, 0 45%);
+}
+
+#JudulHalaman {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 0 55px -18px;
+
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 27px;
+    font-weight: normal;
+}
+
+
+/* KARTU PROFIL */
+
+#KartuProfil {
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 45px;
+
+    width: 100%;
+    min-height: 335px;
+
+    padding: 45px 42px;
+    box-sizing: border-box;
+
+    background-color: white;
+    border: 1px solid #ff9b70;
+    border-radius: 25px;
+    box-shadow: 0 3px 2px #ff5b19;
+}
+
+
+/* INFORMASI UTAMA */
+
+#InformasiUtama {
+    min-width: 0;
+}
+
+#HeaderProfil {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+#FotoProfil {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ff4b00;
+    border-radius: 50%;
+}
+
+#FotoProfil img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#NamaPengguna {
+    width: 285px;
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    background-color: white;
+    border-radius: 0 25px 25px 25px;
+    box-shadow: 5px 5px 0 #ffbd9f;
+}
+
+#NamaPengguna h2 {
+    margin: 0;
+
+    font-family: 'Anton', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+
+/* DETAIL PENGGUNA */
+
+#DetailPengguna {
+    position: relative;
+
+    min-height: 160px;
+    padding: 25px 20px;
+    box-sizing: border-box;
+
+    border: 1px solid #ff4b00;
+    border-radius: 15px;
+}
+
+.BarisDetail {
+    display: grid;
+    grid-template-columns: 115px 12px 1fr;
+    gap: 5px;
+
+    align-items: start;
+    margin-bottom: 12px;
+
+    font-size: 15px;
+}
+
+.BarisDetail strong {
+    font-weight: 700;
+}
+
+.BarisDetail span {
+    font-weight: 700;
+}
+
+.BarisDetail p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+#TombolEdit {
+    position: absolute;
+    right: 18px;
+    bottom: 15px;
+
+    width: 115px;
+    padding: 12px 10px;
+    box-sizing: border-box;
+
+    background-color: #ff7938;
+    border-radius: 25px;
+
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+    font-family: 'Anton', sans-serif;
+    font-size: 13px;
+}
+
+#TombolEdit:hover {
+    background-color: #ff4b00;
+}
+
+
+/* INFORMASI KONTAK */
+
+#InformasiKontak {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    padding-top: 8px;
+}
+
+#TanggalBergabung {
+    margin: 0 0 62px;
+
+    text-align: right;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.BarisKontak {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    width: 100%;
+    min-height: 32px;
+    padding: 5px 12px;
+    margin-bottom: 20px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #ff4b00;
+    border-radius: 25px;
+}
+
+.BarisKontak img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.BarisKontak span {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+#FormLogout {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 5px;
+}
+
+#TombolKeluar {
+    padding: 4px 16px;
+
+    background-color: #f00000;
+    border: none;
+    border-radius: 15px;
+
+    color: white;
+    font-family: 'Anton', sans-serif;
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+#TombolKeluar:hover {
+    background-color: #c90000;
+}

@@ -22,91 +22,160 @@ body {
     overflow-x: hidden;
     color: var(--hitam);
     background: var(--krem);
-    font-family: "Smooch Sans", sans-serif;
+
 }
 
 a {
     text-decoration: none;
 }
-
-/* NAVBAR */
 #navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-
 }
 
 #IsiNavbar {
     background-color: #ffffff;
     width: 100%;
-    height: 70px;
+    min-height: 88px;
+    padding: 0 24px;
     display: flex;
-    justify-content: center;
-    gap: 320px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
     border-radius: 1rem;
+}
+
+#Logo {
+    font-family: "Anton", sans-serif;
+    color: #ff4f00;
+    flex-shrink: 0;
+}
+#navbar h2{
+     font-family: "Anton", sans-serif;
+    color: #ff4f00;
 }
 
 #KelompokMenu {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     gap: 20px;
+    flex: 1;
 }
 
 .LinkMenu {
     text-decoration: none;
     font-family: "Anton", sans-serif;
-    border: solid 3px #ff4f00;
-    gap: 20px;
+    border: 3px solid #ff4f00;
     border-radius: 3rem;
-    width: 140px;
+    width: 175px;
+    padding: 8px;
     text-align: center;
-    padding: 4px;
     color: #ff4f00;
+    white-space: nowrap;
 }
 
 .LinkMenu:hover {
-    background-color: #1c1c1c;
+    background-color: #202020;
     color: #ffffff;
-    border: solid 3px rgba(0, 0, 0, 0);
-}
-
-#Logo {
-    font-family: "Anton", sans-serif;
-    color: #ff4f00;
+    border-color: #202020;
 }
 
 #KelompokLoginDaftar {
-    margin-top: 17px;
     display: flex;
-    justify-content: center;
-    position: relative;
+    justify-content: flex-end;
+    align-items: center;
     gap: 10px;
-
+    flex-shrink: 0;
 }
 
 .btnLoginDaftar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     background-color: #ff4f00;
     color: #ffffff;
     font-family: "Anton", sans-serif;
     border: none;
-    width: 60px;
-    height: 40px;
+    min-width: 60px;
+    min-height: 40px;
+    padding: 8px 12px;
     text-align: center;
     border-radius: 7px;
-    gap: 20px;
+    white-space: nowrap;
 }
 
-/* HERO */
+/* Laptop dan tablet */
+@media (max-width: 1050px) {
+    #IsiNavbar {
+        gap: 15px;
+        padding: 0 20px;
+    }
+
+    #KelompokMenu {
+        gap: 10px;
+    }
+
+    .LinkMenu {
+        width: 130px;
+        font-size: 13px;
+    }
+}
+
+/* HP */
+@media (max-width: 650px) {
+    #IsiNavbar {
+        min-height: 70px;
+        padding: 12px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    #Logo h2 {
+        font-size: 21px;
+    }
+
+    #KelompokMenu {
+        order: 3;
+        flex-basis: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        gap: 9px;
+        padding-bottom: 5px;
+    }
+
+    .LinkMenu {
+        flex-shrink: 0;
+        width: auto;
+        min-width: 105px;
+        padding: 9px;
+        font-size: 12px;
+    }
+
+    #KelompokLoginDaftar {
+        margin-left: auto;
+        margin-top: 0;
+    }
+
+    .btnLoginDaftar {
+        min-width: 58px;
+        min-height: 36px;
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}
+
+
 
 #Hero {
     width: 100%;
     color: white;
     background: linear-gradient(110deg, #ff702f, #ff4b00 65%, #ed3c00);
+    margin-top: 90px;
+    padding: 30px;
 }
 
 #IsiHero {
@@ -146,11 +215,11 @@ a {
     max-width: 475px;
     font-size: 15px;
     line-height: 1.55;
+    font-family: tahoma;
 }
 
 #HeroActions {
     display: flex;
-    flex-wrap: wrap;
     gap: 16px;
     margin-top: 24px;
 }
@@ -411,6 +480,7 @@ a {
 #deskripsiAlur {
     margin-top: 10px;
     font-size: 15px;
+    font-family: tahoma;
     line-height: 1.5;
 }
 
@@ -482,6 +552,7 @@ a {
     max-width: 390px;
     font-size: 14px;
     line-height: 1.5;
+    font-family: tahoma;
 }
 
 .ItemAlur2 .deskripsiAlurItem,
