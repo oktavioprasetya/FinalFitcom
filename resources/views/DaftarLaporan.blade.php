@@ -199,15 +199,16 @@
                                   Kec. Bangsal, Kabupaten Mojokerto,<br>
                                   Jawa Timur 61381</p>   
             </div>
-            <div id="Isi3">
-                <div class="FooterSubJudul"><b>Tautan</b></div><br>
-                <div class="TautanFooter"><a href="{{route('beranda')}}"></a>Beranda</div>
-                <div class="TautanFooter"><a href="{{route('laporan.create')}}"></a>Buat Laporan</div>
-                <div class="TautanFooter"><a href="{{route('daftar.laporan')}}"></a>Daftar Laporan</div>
-                <div class="TautanFooter"><a href="{{route('laporan')}}">Laporan Saya</div>
-                <div class="TautanFooter"><a href="#">Notifikasi</div>
-                <div class="TautanFooter"><a href="{{route('profil')}}">Profil</div>
-            </div>
+            <div id="Isi3"><br>
+            <div class="FooterSubJudul"><b>Tautan</b></div><br>
+
+                <a href="{{ route('beranda') }}" class="TautanFooter">Beranda</a><br>
+                <a href="{{ route('laporan.create') }}" class="TautanFooter">Buat Laporan</a><br>
+                <a href="{{ route('daftar.laporan') }}" class="TautanFooter">Daftar Laporan</a><br>
+                <a href="{{ route('laporan') }}" class="TautanFooter">Laporan Saya</a><br>
+                <a href="#" class="TautanFooter">Notifikasi</a><br>
+                <a href="{{ route('profil') }}" class="TautanFooter">Profil</a><br>
+         </div>
         </div><br>
          <hr>
          <div id="FooterBawah">

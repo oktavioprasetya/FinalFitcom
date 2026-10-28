@@ -149,6 +149,19 @@ a{
     font-size: small;
 }
 
+#Footer #Isi3 a.TautanFooter,
+#Footer #Isi3 a.TautanFooter:link,
+#Footer #Isi3 a.TautanFooter:visited,
+#Footer #Isi3 a.TautanFooter:active {
+    color: #e5e5e5 !important;
+    text-decoration: none !important;
+}
+
+/* Berubah oranye hanya saat kursor diarahkan */
+#Footer #Isi3 a.TautanFooter:hover {
+    color: #ff4b00 !important;
+}
+
 hr {
     width: 90%;
 }
