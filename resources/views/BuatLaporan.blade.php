@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +17,7 @@
     <nav id="navbar">
         <div id="IsiNavbar">
             <div id="Logo">
-                <h2>LaporDesa</h4>
+                <h2>LaporDesa</h2>
             </div>
             <div id="KelompokMenu">
                 <a href="{{ route('beranda')}}" class="LinkMenu">Beranda</a>
@@ -33,11 +32,8 @@
         </div>
     </nav>
 
-    {{-- KONTEN HALAMAN --}}
-
     <main id="IsiHalamanBuatLaporan">
 
-        {{-- PANEL PANDUAN --}}
 
         <aside id="PanelPanduan">
 
@@ -108,7 +104,7 @@
 
             <div class="ContohLaporan">
 
-                <h3>Jelas &amp; lengkap</h3>
+                <h3>Jelas & lengkap</h3>
 
                 <p class="ContohKalimat WarnaHijau">
                     "Jalan di Jl. Melati RT 04/RW 01, dekat pertigaan warung
@@ -126,8 +122,6 @@
         </aside>
 
 
-        {{-- FORMULIR LAPORAN --}}
-
         <section id="KontenFormulir">
 
             <form
@@ -141,7 +135,6 @@
 
                 <div class="JudulFormulir">
 
-                    {{-- Ganti alamat gambar jika logo sudah tersedia --}}
                     <img src="" alt="" class="LogoFormulir">
 
                     <div>
@@ -158,8 +151,6 @@
                     segera ditindaklanjuti.
                 </p>
 
-
-                {{-- PESAN VALIDASI --}}
 
                 @if ($errors->any())
                 <div class="PesanError">
@@ -179,13 +170,10 @@
                 @endif
 
 
-                {{-- NAMA PELAPOR --}}
-
                 <div class="BagianFormulir">
 
                     <div class="JudulBagian">
 
-                        {{-- IKON NAMA: isi src dengan alamat file ikon --}}
 
                         <img src="" alt="" class="IkonBagian">
 
@@ -204,18 +192,12 @@
                         readonly>
 
                 </div>
-
-
-
-
-
-                {{-- KATEGORI --}}
+           
 
                 <div class="BagianFormulir">
 
                     <div class="JudulBagian">
 
-                        {{-- IKON KATEGORI: isi src dengan alamat file ikon --}}
 
                         <img src="" alt="" class="IkonBagian">
 
@@ -247,7 +229,6 @@
                                 {{ old('kategori') == $jenis ? 'checked' : '' }}
                                 required>
 
-                            {{-- IKON KATEGORI: isi src jika ikon tersedia --}}
                             <img src="" alt="" class="IkonKecil">
 
                             <span>{{ $jenis }}</span>
@@ -261,13 +242,10 @@
                 </div>
 
 
-                {{-- LOKASI --}}
-
                 <div class="BagianFormulir">
 
                     <div class="JudulBagian">
 
-                        {{-- IKON LOKASI: isi src dengan alamat file ikon --}}
 
                         <img src="" alt="" class="IkonBagian">
 
@@ -301,20 +279,16 @@
 
                 </div>
 
-
-                {{-- FOTO --}}
-
                 <div class="BagianFormulir">
 
                     <div class="JudulBagian">
 
-                        {{-- IKON FOTO: isi src dengan alamat file ikon --}}
 
                         <img src="" alt="" class="IkonBagian">
 
                         <div>
                             <b>Foto Tempat</b>
-                            <small>Unggah maksimal 2 foto kerusakan</small>
+                            <small>Unggah 1 foto kerusakan (opsional)</small>
                         </div>
 
                     </div>
@@ -322,8 +296,7 @@
 
                     <label for="FotoInput" class="AreaUnggah">
 
-                        {{-- IKON UNGGAH: isi src dengan alamat file ikon --}}
-
+    
                         <img src="" alt="" class="IkonUnggah">
 
                         <b>Klik untuk mengunggah foto</b>
@@ -345,13 +318,11 @@
                 </div>
 
 
-                {{-- DESKRIPSI --}}
-
+                
                 <div class="BagianFormulir">
 
                     <div class="JudulBagian">
 
-                        {{-- IKON DESKRIPSI: isi src dengan alamat file ikon --}}
 
                         <img src="" alt="" class="IkonBagian">
 
@@ -403,12 +374,12 @@
             </div>
             <div id="Isi3">
                 <div class="FooterSubJudul"><b>Tautan</b></div><br>
-                <div class="TautanFooter"><a href="{{route('beranda')}}"></a>Beranda</div>
-                <div class="TautanFooter"><a href="{{route('laporan.create')}}"></a>Buat Laporan</div>
-                <div class="TautanFooter"><a href="{{route('daftar.laporan')}}"></a>Daftar Laporan</div>
-                <div class="TautanFooter"><a href="{{route('laporan')}}">Laporan Saya</div>
-                <div class="TautanFooter"><a href="#">Notifikasi</div>
-                <div class="TautanFooter"><a href="{{route('profil')}}">Profil</div>
+                <div class="TautanFooter"><a href="{{ route('beranda') }}">Beranda</a></div>
+                <div class="TautanFooter"><a href="{{ route('laporan.create') }}">Buat Laporan</a></div>
+                <div class="TautanFooter"><a href="{{ route('daftar.laporan') }}">Daftar Laporan</a></div>
+                <div class="TautanFooter"><a href="{{ route('laporan') }}">Laporan Saya</a></div>
+                <div class="TautanFooter"><a href="#">Notifikasi</a></div>
+                <div class="TautanFooter"><a href="{{ route('profil') }}">Profil</a></div>
             </div>
         </div><br>
         <hr>
@@ -417,8 +388,6 @@
             <p class="TextBawahFooter">Layanan ini gratis untuk seluruh warga desa Ngastemi</p>
         </div>
     </footer>
-
-    {{-- JAVASCRIPT UNTUK NAMA FOTO --}}
 
     <script>
         const FotoInput = document.getElementById('FotoInput');
@@ -442,5 +411,4 @@ FotoInput.addEventListener('change', function () {
     </script>
 
 </body>
-
 </html>

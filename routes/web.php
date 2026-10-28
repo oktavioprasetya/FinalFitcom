@@ -6,7 +6,6 @@ use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\PenggunaController;
 use App\Http\Controllers\AdminController;
 
-
 // HALAMAN UMUM
 
 Route::get('/', function () {
@@ -16,7 +15,6 @@ Route::get('/', function () {
 Route::get('/Beranda', function () {
     return view('Beranda');
 })->name('beranda');
-
 
 // LOGIN DAN LOGOUT
 
@@ -29,7 +27,6 @@ Route::post('/Login', [AuthController::class, 'login'])
 Route::post('/Logout', [AuthController::class, 'logout'])
     ->name('logout');
 
-
 // REGISTRASI DAN PROFIL PENGGUNA
 
 Route::get('/Registrasi', [PenggunaController::class, 'create'])
@@ -40,7 +37,6 @@ Route::post('/Registrasi', [PenggunaController::class, 'store'])
 
 Route::get('/Profil', [PenggunaController::class, 'index'])
     ->name('profil');
-
 
 // LAPORAN PENGGUNA
 
@@ -58,7 +54,6 @@ Route::get('/DetailLaporan/{id}', [LaporanController::class, 'detail'])
 
 Route::get('/DaftarLaporan', [LaporanController::class, 'daftar'])
     ->name('daftar.laporan');
-
 
 // ADMIN
 
