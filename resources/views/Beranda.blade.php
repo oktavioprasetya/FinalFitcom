@@ -233,7 +233,6 @@
                 <a href="{{ route('laporan.create') }}" class="TautanFooter">Buat Laporan</a>
                 <a href="{{ route('daftar.laporan') }}" class="TautanFooter">Daftar Laporan</a>
                 <a href="{{ route('laporan') }}" class="TautanFooter">Laporan Saya</a>
-                <a href="#" class="TautanFooter">Notifikasi</a>
                 <a href="{{ route('profil') }}" class="TautanFooter">Profil</a>
             </div>
         </div><br>
