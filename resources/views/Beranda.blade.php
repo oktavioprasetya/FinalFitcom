@@ -52,7 +52,7 @@
 
                     <div id="HeroActions">
                         <a id="btnBuatLaporan" href="BuatLaporan">Buat Laporan Baru</a>
-                        <a id="btnCekStatus" href="#alur">Cek Status</a>
+                        <a id="btnCekStatus" href="{{route('laporan')}}">Cek Status</a>
                     </div>
                 </div>
 
@@ -80,30 +80,29 @@
             <hr id="garisDeskripsi">
         </section>
 
-        <!-- STATISTIK -->
-        <section id="Statistik">
-            <div id="StatistikBeranda">
-                <div class="ItemStatistik">
-                    <p class="JumlahS">15</p>
-                    <p class="JenisS">Total Laporan</p>
-                </div>
+<section id="Statistik">
+    <div id="StatistikBeranda">
+        <div class="ItemStatistik">
+            <p class="JumlahS">{{ $TotalLaporan }}</p>
+            <p class="JenisS">Total Laporan</p>
+        </div>
 
-                <div class="ItemStatistik">
-                    <p class="JumlahS">5</p>
-                    <p class="JenisS">Diterima</p>
-                </div>
+        <div class="ItemStatistik">
+            <p class="JumlahS">{{ $JumlahDiterima }}</p>
+            <p class="JenisS">Diterima</p>
+        </div>
 
-                <div class="ItemStatistik">
-                    <p class="JumlahS">3</p>
-                    <p class="JenisS">Sedang Diproses</p>
-                </div>
+        <div class="ItemStatistik">
+            <p class="JumlahS">{{ $JumlahDiproses }}</p>
+            <p class="JenisS">Sedang Diproses</p>
+        </div>
 
-                <div class="ItemStatistik">
-                    <p class="JumlahS">7</p>
-                    <p class="JenisS">Selesai</p>
-                </div>
-            </div>
-        </section>
+        <div class="ItemStatistik">
+            <p class="JumlahS">{{ $JumlahSelesai }}</p>
+            <p class="JenisS">Selesai</p>
+        </div>
+    </div>
+</section>
 
         <!-- ALUR LAPORAN -->
         <section id="alur">

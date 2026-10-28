@@ -12,9 +12,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/Beranda', function () {
-    return view('Beranda');
-})->name('beranda');
+Route::get('/Beranda', [LaporanController::class, 'beranda'])
+    ->name('beranda');
 
 // LOGIN DAN LOGOUT
 
@@ -38,7 +37,6 @@ Route::post('/Registrasi', [PenggunaController::class, 'store'])
 Route::get('/Profil', [PenggunaController::class, 'index'])
     ->name('profil');
 
-// LAPORAN PENGGUNA
 
 Route::get('/LaporanSaya', [LaporanController::class, 'index'])
     ->name('laporan');
@@ -55,7 +53,6 @@ Route::get('/DetailLaporan/{id}', [LaporanController::class, 'detail'])
 Route::get('/DaftarLaporan', [LaporanController::class, 'daftar'])
     ->name('daftar.laporan');
 
-// ADMIN
 
 Route::get('/Admin/Dashboard', [AdminController::class, 'index'])
     ->name('admin.dashboard');
